@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -24,7 +26,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyFirstWidget(),
     );
   }
 }
@@ -113,3 +115,38 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
+class MyFirstWidget extends StatelessWidget {
+  int counter = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    counter += 1;
+    print(counter);
+    return Container(
+      child: Center(
+        child: Text('Hello!'),
+      ),
+    );
+  }
+}
+
+// class MyFirstWidget extends StatefulWidget {
+//   @override
+//   State<MyFirstWidget> createState() => _MyFirstWidgetState();
+// }
+
+// class _MyFirstWidgetState extends State<MyFirstWidget> {
+//   int counter = 0;
+
+//   @override
+//   Widget build(BuildContext context) {
+//     counter += 1;
+//     print(counter);
+//     return Container(
+//       child: Center(
+//         child: Text('Hello!'),
+//       ),
+//     );
+//   }
+// }
