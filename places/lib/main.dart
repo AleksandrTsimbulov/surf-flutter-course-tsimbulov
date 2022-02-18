@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyFirstWidget(),
+      home: MySecondWidget(),
     );
   }
 }
@@ -131,22 +131,22 @@ class MyFirstWidget extends StatelessWidget {
   }
 }
 
-// class MyFirstWidget extends StatefulWidget {
-//   @override
-//   State<MyFirstWidget> createState() => _MyFirstWidgetState();
-// }
+class MySecondWidget extends StatefulWidget {
+  @override
+  State<MySecondWidget> createState() => _MySecondWidgetState();
+}
 
-// class _MyFirstWidgetState extends State<MyFirstWidget> {
-//   int counter = 0;
+class _MySecondWidgetState extends State<MySecondWidget> {
+  int counter = 0;
 
-//   @override
-//   Widget build(BuildContext context) {
-//     counter += 1;
-//     print(counter);
-//     return Container(
-//       child: Center(
-//         child: Text('Hello!'),
-//       ),
-//     );
-//   }
-// }
+  @override
+  Widget build(BuildContext context) {
+    counter += 1;
+    print(counter);
+    return Container(
+      child: Center(
+        child: Text('Hello!'),
+      ),
+    );
+  }
+}
