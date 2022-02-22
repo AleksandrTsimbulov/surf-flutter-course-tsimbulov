@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -24,7 +26,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MySecondWidget(),
     );
   }
 }
@@ -110,6 +112,41 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+}
+
+class MyFirstWidget extends StatelessWidget {
+  int counter = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    counter += 1;
+    print(counter);
+    return Container(
+      child: Center(
+        child: Text('Hello!'),
+      ),
+    );
+  }
+}
+
+class MySecondWidget extends StatefulWidget {
+  @override
+  State<MySecondWidget> createState() => _MySecondWidgetState();
+}
+
+class _MySecondWidgetState extends State<MySecondWidget> {
+  int counter = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    counter += 1;
+    print(counter);
+    return Container(
+      child: Center(
+        child: Text('Hello!'),
+      ),
     );
   }
 }
