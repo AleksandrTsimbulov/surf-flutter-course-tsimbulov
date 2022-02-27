@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// Screen skeleton for 'interesting places'
 class SightListScreen extends StatefulWidget {
   const SightListScreen({Key? key}) : super(key: key);
 
